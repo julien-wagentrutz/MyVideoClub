@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c500b2bf-bd2f-4caf-bca8-51a2580a5943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/bad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GenreItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MovieItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/Colors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/navigation/BottomTab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/navigation/DetailNavigator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/DetailScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/HomeScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/MovieScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/SearchScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/movie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ResultSearch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/navigation/SearchNavigator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/BottomTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/BottomTab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/MovieScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MovieScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SearchScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SearchScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/movie.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/navigation" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -56,6 +51,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/navigation" />
+      <recent name="$PROJECT_DIR$/src/screens" />
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/services" />
       <recent name="$PROJECT_DIR$/src/constants" />
     </key>
@@ -72,11 +70,24 @@
       <option name="presentableId" value="Default" />
       <updated>1612814152763</updated>
       <workItem from="1612814154264" duration="18334000" />
-      <workItem from="1612863256133" duration="4682000" />
+      <workItem from="1612863256133" duration="5503000" />
+      <workItem from="1612960564465" duration="6739000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/MovieItem.js</url>
+          <line>54</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

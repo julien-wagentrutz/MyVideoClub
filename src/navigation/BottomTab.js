@@ -1,11 +1,12 @@
 import {AntDesign, Feather, Ionicons} from '@expo/vector-icons';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {HomeScreen} from "../screens/HomeScreen";
-import {SearchScreen} from "../screens/SearchScreen";
+import SearchScreen from "../screens/SearchScreen";
 import {DetailNavigator} from "../navigation/DetailNavigator";
 import React from "react";
 import {StyleSheet} from "react-native";
 import Colors from "../constants/Colors";
+import {SearchNavigator} from "./SearchNavigator";
 
 const Tab = createBottomTabNavigator();
 const customTabBarStyle = {
@@ -36,7 +37,7 @@ export const MyTabs = () => {
             />
             <Tab.Screen
                 name="Search"
-                component={SearchScreen}
+                component={SearchNavigator}
                 options={{
                     tabBarLabel: () => null,
                     tabBarIcon: ({ color }) => <Ionicons name="search" size={32} color={color} />

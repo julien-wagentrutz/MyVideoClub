@@ -4,7 +4,7 @@ import Colors from "../constants/Colors";
 import {getAllMovieByGenre, getDirectorMovie} from "../services/movie";
 
 export const MovieItem = (props) => {
-    const {movieId,index, goToDetail} = props;
+    const {movieId,index, goToDetail, navigation} = props;
     const [isLoading,setIsLoading] = useState(false)
     const [movieCrew,setMovieCrew] = useState('')
     const [movieDirector,setMovieDirector] = useState('')
@@ -39,19 +39,22 @@ export const MovieItem = (props) => {
             >
                 <View style={styles.globalContainer}>
                     <View style={styles.leftContainer}>
-                        <Image
-                            source={{uri: `https://image.tmdb.org/t/p/original${movieId.poster_path}`}}
-                            style={styles.poster}
-                        />
+                        <View style={styles.blockImage}>
+                            <Image
+                                source={{uri: `https://image.tmdb.org/t/p/original${movieId.poster_path}`}}
+                                style={styles.poster}
+                            />
+                        </View>
+
                     </View>
                     <View style={styles.rightContainer} >
-                        <View>
+                        <View style={styles.leftContent}>
                             <Text style={styles.text}  >{movieId.title}</Text>
-                            <Text style={styles.text}  >{movieId.release_date}</Text>
-                            <Text style={styles.text}  >{isLoading ? movieDirector.name: ''}</Text>
+                            <Text style={styles.textLittle}  >{movieId.release_date}</Text>
+                            <Text style={styles.textLittle}  >{isLoading ? movieDirector.name: ''}</Text>
                         </View>
-                        <View>
-                            <Text style={styles.text}  >{movieId.vote_average}</Text>
+                        <View style={styles.rightContent}>
+                            <Text style={styles.textNote}  >{movieId.vote_average}</Text>
                         </View>
                     </View>
                 </View>
@@ -84,7 +87,12 @@ const styles = StyleSheet.create({
         elevation: 5,
     },
     text: {
-        color: Colors.primaryColor,
+        color: Colors.secondaryColor,
+        fontWeight: "bold",
+        fontSize: 16,
+    },
+    textLittle: {
+        color: Colors.secondaryColor,
         fontWeight: "bold",
         fontSize: 14,
     },
@@ -94,16 +102,36 @@ const styles = StyleSheet.create({
     },
     rightContainer: {
         flex: 6,
+        flexDirection: 'row',
     },
     globalContainer: {
         flexDirection: 'row',
         width: '100%',
         height: '100%'
     },
+    blockImage: {
+        width:'100%',
+        height:'100%',
+        justifyContent:'flex-start'
+    },
     poster: {
         height: '100%',
+        width:'100%',
         resizeMode: 'contain',
-        postition: 'absolute',
-        left: '0px',
-    }
+    },
+    leftContent: {
+      flex:6,
+        justifyContent: 'center',
+        paddingLeft: 15
+    },
+    rightContent: {
+        flex:2,
+        justifyContent: 'center',
+        color: Colors.primaryColor,
+    },
+    textNote: {
+        color: Colors.primaryColor,
+        fontWeight: "bold",
+        fontSize: 16,
+    },
 })

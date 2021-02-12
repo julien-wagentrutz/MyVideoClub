@@ -4,7 +4,7 @@ import Colors from "../constants/Colors";
 import {getAllGenre, getMovie} from "../services/movie";
 
 export const MovieScreen = (props) => {
-    const {movieId} = props;
+    const {movieId,navigation} = props;
     const [movie, setMovie] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -24,10 +24,20 @@ export const MovieScreen = (props) => {
                     <View style={styles.topHeader}>
                             <Image
                                 source={{uri: `https://image.tmdb.org/t/p/original${movie.backdrop_path}`}}
-                                style={styles.poster}
+                                style={styles.posterCover}
                             />
                     </View>
                     <View style={styles.bottomHeader}>
+                        <View style={styles.blockPoster}>
+                            <View style={styles.bgPoster}>
+                                <Image
+                                    source={{uri: `https://image.tmdb.org/t/p/original${movie.poster_path}`}}
+                                    style={styles.poster}
+                                />
+                            </View>
+                        </View>
+                        <View style={styles.blockTitle}></View>
+                        <View style={styles.blockPlayer}></View>
                     </View>
                 </View>
                 <View style={styles.content}>
@@ -65,8 +75,11 @@ const styles = StyleSheet.create({
     bottomHeader: {
         flex:2,
         width:'100%',
+        paddingLeft: 10,
+        paddingRight: 10,
+        flexDirection: 'row',
     },
-    poster: {
+    posterCover: {
         width:'100%',
         height: '100%',
         resizeMode: 'cover',
@@ -82,5 +95,25 @@ const styles = StyleSheet.create({
     description: {
         fontSize: 18,
         color: Colors.secondaryColor,
+    },
+    blockPoster: {
+        flex:2,
+    },
+    blockTitle: {
+        flex:4,
+    },
+    blockPlayer: {
+        flex:2,
+    },
+    bgPoster: {
+        height: '100%',
+        width: '150px',
+        backgroundColor: '#FFF'
+    },
+    poster: {
+        padding: '5px',
+        height:'100%',
+        width:'100%',
+        resizeMode: 'cen'
     }
 })
